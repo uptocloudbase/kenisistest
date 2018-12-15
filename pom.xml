@@ -10,7 +10,11 @@
 
     <dependencies>
 
-        <!-- https://mvnrepository.com/artifact/com.amazonaws/amazon-kinesis-client -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk</artifactId>
+            <version>1.11.452</version>
+        </dependency>
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>amazon-kinesis-client</artifactId>
@@ -43,6 +47,21 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>org.agd.KinesesConsumer</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 

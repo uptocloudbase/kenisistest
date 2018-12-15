@@ -8,22 +8,36 @@ import org.agd.entity.RecordsProcessorFactory;
 
 public class KinesesConsumer {
 
-    public static void main(String[] args) {
+    private static final long TIMEOUT = 180000; //3 mins
+
+    public static void main(String[] args) throws InterruptedException {
+
+        if (args.length != 1) {
+            System.out.println("Gis us a app name buddy");
+            System.exit(0);
+        }
+
+        String appName = args[0];
 
         KinesisClientLibConfiguration config =
                 new KinesisClientLibConfiguration(
-                        "KinesisProducerLibSampleConsumer",
+                        appName,
                         KinesisProducerTest.STREAM,
                         new DefaultAWSCredentialsProviderChain(),
-                        "KinesisProducerLibSampleConsumer")
+                        appName)
                         .withRegionName(KinesisProducerTest.REGION)
-                        .withInitialPositionInStream(InitialPositionInStream.TRIM_HORIZON);
+                        .withInitialPositionInStream(InitialPositionInStream.LATEST);
 
-        new Worker.Builder()
+        Worker worker = new Worker.Builder()
                 .recordProcessorFactory(new RecordsProcessorFactory())
                 .config(config)
-                .build()
-                .run();
+                .build();
 
+                new Thread(worker).start();
+
+                Thread.sleep(TIMEOUT);
+
+                System.out.println("Worker shutdown.");
+                worker.startGracefulShutdown();
     }
 }

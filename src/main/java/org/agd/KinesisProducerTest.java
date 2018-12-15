@@ -41,6 +41,7 @@ public class KinesisProducerTest {
                 Thread.sleep(delay);
 
             }
+            Thread.sleep(5000);
         } finally {
             producer.destroy();
         }
@@ -55,13 +56,13 @@ public class KinesisProducerTest {
 
         ByteBuffer data = ByteBuffer.wrap(json.getBytes("UTF-8"));
         producer.addUserRecord(stream, partitionKey, randomExplicitHashKey(), data);
-        //System.out.println(json);
+
     }
 
     private static Message generateRandomMessage(String feed) {
 
-        String day = "" + getRandomNumber(30);
-        String month = "" + getRandomNumber(12);
+        String day = "" + getRandomNumber(10);
+        String month = "10"; // + getRandomNumber(2);
 
         return new Message(feed, day, month, "2018", "Gertrude", 42, "OL3 5PL");
 
