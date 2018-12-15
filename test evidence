@@ -1,0 +1,112 @@
+3 servers with the same app name but diffrent worker id's.
+
+Server 1
+========
+
+== SHUTDOWN RECORD PROCESSOR ==
+Processed 3378 records.
+Processed the following partition keys:
+ - 8-10-2018-feed2
+ - 0-10-2018-feed3
+ - 9-10-2018-feed3
+ - 2-10-2018-feed2
+ - 3-10-2018-feed3
+ - 2-10-2018-feed1
+ - 9-10-2018-feed1
+ - 8-10-2018-feed1
+ - 7-10-2018-feed3
+ - 6-10-2018-feed3
+ - 0-10-2018-feed2
+ - 5-10-2018-feed2
+ - 4-10-2018-feed2
+ - 5-10-2018-feed3
+ - 5-10-2018-feed1
+ - 1-10-2018-feed2
+ - 7-10-2018-feed1
+ - 3-10-2018-feed1
+ - 7-10-2018-feed2
+ - 9-10-2018-feed2
+ - 2-10-2018-feed3
+ - 1-10-2018-feed3
+ - 4-10-2018-feed1
+ - 3-10-2018-feed2
+ - 0-10-2018-feed1
+ - 6-10-2018-feed1
+ - 4-10-2018-feed3
+ - 8-10-2018-feed3
+ - 6-10-2018-feed2
+ - 1-10-2018-feed1
+
+ Server 2
+ ========
+
+ == SHUTDOWN RECORD PROCESSOR ==
+Processed 3278 records.
+Processed the following partition keys:
+ - 2-10-2018-feed2
+ - 3-10-2018-feed3
+ - 8-10-2018-feed2
+ - 5-10-2018-feed3
+ - 4-10-2018-feed3
+ - 7-10-2018-feed2
+ - 1-10-2018-feed3
+ - 8-10-2018-feed1
+ - 4-10-2018-feed1
+ - 2-10-2018-feed3
+ - 6-10-2018-feed1
+ - 9-10-2018-feed2
+ - 0-10-2018-feed1
+ - 1-10-2018-feed2
+ - 6-10-2018-feed3
+ - 0-10-2018-feed2
+ - 8-10-2018-feed3
+ - 1-10-2018-feed1
+ - 4-10-2018-feed2
+ - 2-10-2018-feed1
+ - 0-10-2018-feed3
+ - 9-10-2018-feed1
+ - 5-10-2018-feed2
+ - 7-10-2018-feed1
+ - 3-10-2018-feed1
+ - 9-10-2018-feed3
+ - 7-10-2018-feed3
+ - 6-10-2018-feed2
+ - 3-10-2018-feed2
+ - 5-10-2018-feed1
+
+ Server 3
+ ========
+
+ == SHUTDOWN RECORD PROCESSOR ==
+Processed 3344 records.
+Processed the following partition keys:
+ - 7-10-2018-feed2
+ - 1-10-2018-feed3
+ - 6-10-2018-feed2
+ - 7-10-2018-feed1
+ - 2-10-2018-feed2
+ - 9-10-2018-feed2
+ - 0-10-2018-feed3
+ - 8-10-2018-feed1
+ - 1-10-2018-feed1
+ - 6-10-2018-feed3
+ - 2-10-2018-feed1
+ - 0-10-2018-feed1
+ - 5-10-2018-feed1
+ - 5-10-2018-feed3
+ - 3-10-2018-feed1
+ - 6-10-2018-feed1
+ - 2-10-2018-feed3
+ - 3-10-2018-feed3
+ - 7-10-2018-feed3
+ - 8-10-2018-feed2
+ - 9-10-2018-feed1
+ - 4-10-2018-feed1
+ - 4-10-2018-feed2
+ - 9-10-2018-feed3
+ - 0-10-2018-feed2
+ - 4-10-2018-feed3
+ - 8-10-2018-feed3
+ - 1-10-2018-feed2
+ - 5-10-2018-feed2
+ - 3-10-2018-feed2

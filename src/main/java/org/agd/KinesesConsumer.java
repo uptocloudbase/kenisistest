@@ -12,19 +12,20 @@ public class KinesesConsumer {
 
     public static void main(String[] args) throws InterruptedException {
 
-        if (args.length != 1) {
-            System.out.println("Gis us a app name buddy");
+        if (args.length != 2) {
+            System.out.println("Gis us a app name and worker id buddy");
             System.exit(0);
         }
 
         String appName = args[0];
+        String workerId = args[1];
 
         KinesisClientLibConfiguration config =
                 new KinesisClientLibConfiguration(
                         appName,
                         KinesisProducerTest.STREAM,
                         new DefaultAWSCredentialsProviderChain(),
-                        appName)
+                        workerId)
                         .withRegionName(KinesisProducerTest.REGION)
                         .withInitialPositionInStream(InitialPositionInStream.LATEST);
 
